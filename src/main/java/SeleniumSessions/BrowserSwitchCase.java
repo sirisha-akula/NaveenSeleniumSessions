@@ -2,14 +2,16 @@ package SeleniumSessions;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BrowserSwitchCase {
-	private static WebDriver driver;
 	
-	public static WebDriver launchbrowser(String browser) {	
+	private WebDriver driver;
+	
+	public WebDriver launchbrowser(String browser) {	
 	
 		switch (browser.toLowerCase().trim()) {
 		case "chrome":
@@ -18,11 +20,11 @@ public class BrowserSwitchCase {
 			break;
 		case "firefox":
 			WebDriverManager.firefoxdriver().setup();
-			 driver = new ChromeDriver(); //launch chrome
+			 driver = new FirefoxDriver(); //launch firefox
 			break;
 			
 		case "safari":
-			 driver = new SafariDriver(); //launch chrome
+			 driver = new SafariDriver(); //launch safari
 			break;
 		
 		default:
@@ -33,11 +35,33 @@ public class BrowserSwitchCase {
 		return driver;
 	}
 
-	public static void main(String[] args) {
-		BrowserSwitchCase.launchbrowser("Safari");
-		driver.get("https://www.amazon.ca/");
+	public void enterUrl(String url) {
+		System.out.println("url is : " + url);
 		
+		if (url.contains("http") || url.contains("https")) {
+			driver.get(url);
+		} else {
+			System.out.println("Incorrect url....");
+			try {
+				throw new Exception("INCORRECT URL MISSING HTTP OR HTTPS");
+			} catch (Exception e) {
+
+			}
+		}
 	}
+
+	public String getPageTitle() {
+		return driver.getTitle();
+	}
+
+	public String getPageUrl() {
+		return driver.getCurrentUrl();
+	}
+
+	public void closeBrowser() {
+		driver.close();
+	}
+
 	
 	
 }
