@@ -6,6 +6,8 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 
 public class ElementUtil {
 
@@ -142,7 +144,7 @@ public class ElementUtil {
 		}
 		return eleAttributeList;
 	}
-	
+
 	public void clickOnLink(By locator, String linkText) {
 		List<WebElement> langList = getElements(locator);
 		System.out.println(langList.size());
@@ -156,5 +158,70 @@ public class ElementUtil {
 		}
 
 	}
+
+	/**************************** Drop Down Utils *************************/
+
+	public void doSelectDropDownByIndex(By locator, int index) {
+		Select select = new Select(getElement(locator));
+		select.selectByIndex(index);
+	}
+
+	public void doSelectDropDownByValue(By locator, String value) {
+		Select select = new Select(getElement(locator));
+		select.selectByValue(value);
+	}
+
+	public void doSelectDropDownByVisibleText(By locator, String visibleText) {
+		Select select = new Select(getElement(locator));
+		select.selectByVisibleText(visibleText);
+	}
+
+	public int getDropDownOptionsCount(By locator) {
+		Select select = new Select(getElement(locator));
+		List<WebElement> allOptions = select.getOptions();
+		return allOptions.size();
+	}
+
+	public void selectValueFromDropDown(By locator, String value) {
+		Select select = new Select(getElement(locator));
+		List<WebElement> allOptions = select.getOptions();
+
+		for (WebElement e : allOptions) {
+			String text = e.getText();
+			if (text.equals(value)) {
+				e.click();
+			}
+		}
+	}
+
+	public List<String> getDropDownOptionsList(By locator) {
+		Select select = new Select(getElement(locator));
+		List<WebElement> allOptions = select.getOptions();
+		List<String> optionsTextList = new ArrayList<String>();
+
+		for (WebElement e : allOptions) {
+			String text = e.getText();
+			optionsTextList.add(text);
+		}
+		return optionsTextList;
+	}
+	
+	/********************ActionsSendKeysAndClick******************/
+	
+	public void doActionsSendKeys(By locator, String value) {
+		Actions act = new Actions(driver);
+		act.sendKeys(getElement(locator),value).perform();
+	}
+	
+	/**
+	 *Clicks in the middle of the given element. 
+	 *Equivalent to: Actions.moveToElement(onElement).click() 
+	 * @param locator
+	 */
+	public void doActionsClick(By locator) {
+		Actions act = new Actions(driver);
+		act.click(getElement(locator)).perform();
+	}
+	
 
 }
