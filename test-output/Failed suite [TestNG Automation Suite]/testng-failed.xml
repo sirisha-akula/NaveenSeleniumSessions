@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="2" name="Failed suite [Failed suite [TestNG Automation Suite]]">
+  <test thread-count="5" verbose="2" name="OrangeHRM Test(failed)(failed)">
+    <classes>
+      <class name="Apptests.OrangeHrmTest">
+        <methods>
+          <include name="pageTitleTest"/>
+          <include name="tearDown"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- Apptests.OrangeHrmTest -->
+    </classes>
+  </test> <!-- OrangeHRM Test(failed)(failed) -->
+  <test thread-count="5" verbose="2" name="Google Test(failed)(failed)">
+    <classes>
+      <class name="Apptests.GoogleTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="launchBrowser"/>
+          <include name="googletTitleTest"/>
+        </methods>
+      </class> <!-- Apptests.GoogleTest -->
+    </classes>
+  </test> <!-- Google Test(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [TestNG Automation Suite]] -->

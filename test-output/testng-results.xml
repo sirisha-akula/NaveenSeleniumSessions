@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="8" passed="8">
+  <reporter-output>
+  </reporter-output>
+  <suite name="TestNG Automation Suite" duration-ms="8509" started-at="2022-02-03T22:51:19Z" finished-at="2022-02-03T22:51:27Z">
+    <groups>
+    </groups>
+    <test name="Google Test" duration-ms="3412" started-at="2022-02-03T22:51:19Z" finished-at="2022-02-03T22:51:22Z">
+      <class name="Apptests.GoogleTest">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Apptests.GoogleTest@5b87ed94]" name="launchBrowser" is-config="true" duration-ms="2958" started-at="2022-02-03T22:51:19Z" finished-at="2022-02-03T22:51:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[safari]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://www.google.com/]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[25]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="googletTitleTest()[pri:1, instance:Apptests.GoogleTest@5b87ed94]" name="googletTitleTest" duration-ms="51" started-at="2022-02-03T22:51:22Z" finished-at="2022-02-03T22:51:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- googletTitleTest -->
+        <test-method status="PASS" signature="googleSearch()[pri:2, instance:Apptests.GoogleTest@5b87ed94]" name="googleSearch" duration-ms="78" started-at="2022-02-03T22:51:22Z" finished-at="2022-02-03T22:51:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- googleSearch -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Apptests.GoogleTest@5b87ed94]" name="tearDown" is-config="true" duration-ms="281" started-at="2022-02-03T22:51:22Z" finished-at="2022-02-03T22:51:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Apptests.GoogleTest -->
+    </test> <!-- Google Test -->
+    <test name="DemoCart Test" duration-ms="4880" started-at="2022-02-03T22:51:19Z" finished-at="2022-02-03T22:51:23Z">
+      <class name="Apptests.DemoOpenCartTest">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Apptests.DemoOpenCartTest@4fe3c938]" name="launchBrowser" is-config="true" duration-ms="4610" started-at="2022-02-03T22:51:19Z" finished-at="2022-02-03T22:51:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[google]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://demo.opencart.com/]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="openCartTitleTest()[pri:1, instance:Apptests.DemoOpenCartTest@4fe3c938]" name="openCartTitleTest" duration-ms="30" started-at="2022-02-03T22:51:23Z" finished-at="2022-02-03T22:51:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openCartTitleTest -->
+        <test-method status="PASS" signature="openCartHeaderTest()[pri:2, instance:Apptests.DemoOpenCartTest@4fe3c938]" name="openCartHeaderTest" duration-ms="103" started-at="2022-02-03T22:51:23Z" finished-at="2022-02-03T22:51:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openCartHeaderTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Apptests.DemoOpenCartTest@4fe3c938]" name="tearDown" is-config="true" duration-ms="122" started-at="2022-02-03T22:51:23Z" finished-at="2022-02-03T22:51:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Apptests.DemoOpenCartTest -->
+    </test> <!-- DemoCart Test -->
+    <test name="OrangeHRM Test" duration-ms="8509" started-at="2022-02-03T22:51:19Z" finished-at="2022-02-03T22:51:27Z">
+      <class name="Apptests.OrangeHrmTest">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:Apptests.OrangeHrmTest@1d16f93d]" name="launchBrowser" is-config="true" duration-ms="7822" started-at="2022-02-03T22:51:19Z" finished-at="2022-02-03T22:51:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="logoTest()[pri:1, instance:Apptests.OrangeHrmTest@1d16f93d]" name="logoTest" duration-ms="107" started-at="2022-02-03T22:51:26Z" finished-at="2022-02-03T22:51:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoTest -->
+        <test-method status="PASS" signature="contactSalesLinkTest()[pri:2, instance:Apptests.OrangeHrmTest@1d16f93d]" name="contactSalesLinkTest" duration-ms="107" started-at="2022-02-03T22:51:26Z" finished-at="2022-02-03T22:51:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- contactSalesLinkTest -->
+        <test-method status="PASS" signature="headerTest()[pri:3, instance:Apptests.OrangeHrmTest@1d16f93d]" name="headerTest" duration-ms="21" started-at="2022-02-03T22:51:27Z" finished-at="2022-02-03T22:51:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- headerTest -->
+        <test-method status="PASS" signature="pageTitleTest()[pri:4, instance:Apptests.OrangeHrmTest@1d16f93d]" name="pageTitleTest" duration-ms="7" started-at="2022-02-03T22:51:27Z" finished-at="2022-02-03T22:51:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pageTitleTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Apptests.OrangeHrmTest@1d16f93d]" name="tearDown" is-config="true" duration-ms="421" started-at="2022-02-03T22:51:27Z" finished-at="2022-02-03T22:51:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Apptests.OrangeHrmTest -->
+    </test> <!-- OrangeHRM Test -->
+  </suite> <!-- TestNG Automation Suite -->
+</testng-results>
